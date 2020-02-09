@@ -1,41 +1,49 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Roet [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/roet/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/roet)
 
-My awesome module.
+Find a root of a number.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/roet.png)](https://npmjs.com/package/roet)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install roet
 ```
+
+## Strategy
+
+Since a natively supported Math function doesn't exist, `roet` finds the multiplicative equivalent instead using this formula:
+
+![Strategy formula](media/formula.svg)
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const roet = require("roet");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+roet(16); // Square root of 16
+//=> 4
+
+roet(16, 4); // Fourth root of 16
+//=> 2
+
+roet(-16, 4); // Negative number
+//=> -2
 ```
 
 ## API
 
-### theModule(input, options?)
+### roet(number, root?)
 
-#### input
+#### number
 
-Type: `string`
+Type: `number`
 
-Lorem ipsum.
+The number to find the root of.
 
-#### options
+#### root
 
-Type: `object`
+Type: `number` (positive)\
+Default: `2`
 
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The root to calculate.

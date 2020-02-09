@@ -1,7 +1,13 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-	if (typeof input !== "string") throw new TypeError(`Expected a string, got ${typeof input}`)
+const { default: ow } = require("ow")
 
-	return `${input} & ${postfix}`
+module.exports = (number, root = 2) => {
+	ow(number, ow.number)
+	ow(root, ow.number.positive)
+
+	const normalized = Math.abs(number)
+	const answer = normalized ** (1 / root)
+
+	return number < 0 ? -answer : answer
 }
