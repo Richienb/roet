@@ -14,8 +14,7 @@
 		"node": ">=7"
 	},
 	"scripts": {
-		"lint": "xo",
-		"test": "yarn lint && uvu"
+		"test": "xo && uvu"
 	},
 	"keywords": [
 		"root",

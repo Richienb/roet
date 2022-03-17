@@ -11,7 +11,6 @@ test("main", () => {
 test("errors", () => {
 	throws(() => roet("senpai"), ({ message }) => message === "Invalid number provided")
 
-
 	throws(() => roet(16, 0), ({ message }) => message === "Invalid root provided")
 	throws(() => roet(16, -50), ({ message }) => message === "Invalid root provided")
 
