@@ -14,8 +14,7 @@
 		"node": ">=7"
 	},
 	"scripts": {
-		"lint": "xo",
-		"test": "yarn lint && ava"
+		"test": "xo && uvu"
 	},
 	"keywords": [
 		"root",
@@ -26,11 +25,8 @@
 		"negative",
 		"find"
 	],
-	"dependencies": {
-		"ow": "^0.15.1"
-	},
 	"devDependencies": {
-		"ava": "^3.2.0",
+		"uvu": "^0.5.3",
 		"eslint-config-richienb": "^0.3.0",
 		"xo": "^0.25.3"
 	},
