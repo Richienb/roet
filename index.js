@@ -1,10 +1,13 @@
 "use strict"
 
-const { default: ow } = require("ow")
-
 module.exports = (number, root = 2) => {
-	ow(number, ow.number)
-	ow(root, ow.number.positive)
+	if (typeof number !== "number") {
+		throw new TypeError("Invalid number provided")
+	}
+
+	if (typeof root !== "number" || root <= 0) {
+		throw new Error("Invalid root provided")
+	}
 
 	const normalized = Math.abs(number)
 	const answer = normalized ** (1 / root)

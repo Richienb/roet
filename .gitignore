@@ -182,3 +182,8 @@ public
 
 # TernJS port file
 .tern-port
+
+# Lockfiles
+
+package-lock.json
+yarn.lock
