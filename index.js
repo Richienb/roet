@@ -9,8 +9,13 @@ module.exports = (number, root = 2) => {
 		throw new Error("Invalid root provided")
 	}
 
-	const normalized = Math.abs(number)
-	const answer = normalized ** (1 / root)
+	if (number < 0) {
+		if (root % 2 !== 0) {
+			return NaN
+		}
 
-	return number < 0 ? -answer : answer
+		return 0 - (Math.abs(number) ** (1 / root))
+	}
+
+	return number ** (1 / root)
 }

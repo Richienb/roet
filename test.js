@@ -1,11 +1,12 @@
 const { test } = require("uvu")
-const { is, throws } = require("uvu/assert")
+const { is, equal, throws } = require("uvu/assert")
 const roet = require(".")
 
 test("main", () => {
 	is(roet(16), 4)
 	is(roet(16, 4), 2)
 	is(roet(-16, 4), -2)
+	equal(roet(-27, 3), NaN)
 })
 
 test("errors", () => {
