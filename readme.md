@@ -1,4 +1,4 @@
-# Roet [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/roet/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/roet)
+# Roet
 
 Find a root of a number.
 
@@ -12,14 +12,12 @@ npm install roet
 
 ## Strategy
 
-Since a natively supported Math function doesn't exist, `roet` finds the multiplicative equivalent instead using this formula:
-
-![Strategy formula](media/formula.svg)
+Roots are solved as a [special type of exponentiation](https://en.wikipedia.org/wiki/Nth_root).
 
 ## Usage
 
 ```js
-const roet = require("roet");
+import roet from 'roet';
 
 roet(16); // Square root of 16
 //=> 4

@@ -10,11 +10,12 @@
 		"index.js",
 		"index.d.ts"
 	],
+	"type": "module",
 	"engines": {
-		"node": ">=7"
+		"node": ">=12"
 	},
 	"scripts": {
-		"test": "xo && uvu"
+		"test": "xo && ava && tsd"
 	},
 	"keywords": [
 		"root",
@@ -26,14 +27,8 @@
 		"find"
 	],
 	"devDependencies": {
-		"uvu": "^0.5.3",
-		"eslint-config-richienb": "^0.3.0",
-		"xo": "^0.25.3"
-	},
-	"resolutions": {
-		"eslint": "^6.8.0"
-	},
-	"xo": {
-		"extends": "richienb/node"
+		"ava": "^4.2.0",
+		"tsd": "^0.20.0",
+		"xo": "^0.48.0"
 	}
 }

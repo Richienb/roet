@@ -1,21 +1,18 @@
-const { test } = require("uvu")
-const { is, equal, throws } = require("uvu/assert")
-const roet = require(".")
+import test from 'ava';
+import roet from './index.js';
 
-test("main", () => {
-	is(roet(16), 4)
-	is(roet(16, 4), 2)
-	is(roet(-16, 4), -2)
-	equal(roet(-27, 3), NaN)
-})
+test('main', t => {
+	t.is(roet(16), 4);
+	t.is(roet(16, 4), 2);
+	t.is(roet(-16, 4), -2);
+	t.deepEqual(roet(-27, 3), Number.NaN);
+});
 
-test("errors", () => {
-	throws(() => roet("foo"), ({ message }) => message === "Invalid number provided")
+test('errors', t => {
+	t.throws(() => roet('foo'), {message: 'Invalid number provided'});
 
-	throws(() => roet(16, 0), ({ message }) => message === "Invalid root provided")
-	throws(() => roet(16, -50), ({ message }) => message === "Invalid root provided")
+	t.throws(() => roet(16, 0), {message: 'Invalid root provided'});
+	t.throws(() => roet(16, -50), {message: 'Invalid root provided'});
 
-	throws(() => roet(16, "foo"), ({ message }) => message === "Invalid root provided")
-})
-
-test.run()
+	t.throws(() => roet(16, 'foo'), {message: 'Invalid root provided'});
+});

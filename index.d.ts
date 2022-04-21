@@ -1,21 +1,21 @@
 /**
- * Find a root of a number.
- * @param number The number to find the root of.
- * @param root The root to calculate.
- * @example
- * ```
- * const roet = require("roet");
- *
- * roet(16); // Square root of 16
- * //=> 4
- *
- * roet(16, 4); // Fourth root of 16
- * //=> 2
- *
- * roet(-16, 4); // Negative number
- * //=> -2
- * ```
-*/
-declare function roet(number: number, root?: number): number
+Find a root of a number.
 
-export = roet
+@param number The number to find the root of.
+@param root The root to calculate.
+
+@example
+```
+import roet from 'roet';
+
+roet(16); // Square root of 16
+//=> 4
+
+roet(16, 4); // Fourth root of 16
+//=> 2
+
+roet(-16, 4); // Negative number
+//=> -2
+```
+*/
+export default function roet(number: number, root?: number): number;
