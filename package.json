@@ -2,15 +2,18 @@
 	"name": "roet",
 	"version": "2.0.0",
 	"description": "Find a root of a number.",
-	"repository": "https://github.com/Richienb/roet.git",
-	"author": "Richie Bendall <richiebendall@gmail.com>",
+	"repository": "Richienb/roet",
+	"author": {
+		"name": "Richie Bendall",
+		"email": "richiebendall@gmail.com"
+	},
 	"license": "MIT",
-	"main": "index.js",
 	"files": [
 		"index.js",
 		"index.d.ts"
 	],
 	"type": "module",
+	"exports": "./index.js",
 	"engines": {
 		"node": ">=12"
 	},
